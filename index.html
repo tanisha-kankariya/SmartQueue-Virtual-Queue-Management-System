@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartQueue – Virtual Queue Management System</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg" />
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <!-- Bootstrap 5 & Font Awesome Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+  <!-- Custom SaaS Design System -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="landing-body" data-page="landing">
+
+  <!-- Sticky Glassmorphic Navigation Bar -->
+  <header class="landing-navbar">
+    <div class="container py-3">
+      <div class="d-flex align-items-center justify-content-between gap-3">
+        <a href="index.html" class="brand-lockup">
+          <img src="assets/images/logo.svg" alt="SmartQueue Logo" />
+          <span>Smart<span class="brand-accent">Queue</span></span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="d-none d-lg-flex align-items-center gap-1" aria-label="Primary navigation">
+          <a href="#how-it-works" class="landing-nav-link">How It Works</a>
+          <a href="#features" class="landing-nav-link">Features</a>
+          <a href="#benefits" class="landing-nav-link">Benefits</a>
+          <a href="dashboard.html" class="landing-nav-link">User Portal</a>
+          <a href="staff.html" class="landing-nav-link">Staff Console</a>
+          <a href="admin.html" class="landing-nav-link">Admin</a>
+        </nav>
+
+        <!-- Action Buttons & Mobile Toggle -->
+        <div class="d-flex align-items-center gap-2">
+          <a href="tracking.html" class="btn-sq-outline d-none d-sm-inline-flex py-2 px-3">
+            <i class="fa-solid fa-location-crosshairs"></i> Track Token
+          </a>
+          <a href="booking.html" class="btn-sq-primary py-2 px-3">
+            Book Token
+          </a>
+          <button type="button" class="mobile-menu-btn d-lg-none" id="landing-nav-toggle" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Collapsible Nav Menu -->
+      <div id="landing-nav-links" class="d-none flex-column gap-2 pt-3 mt-3 border-top d-lg-none">
+        <a href="#how-it-works" class="landing-nav-link">How It Works</a>
+        <a href="#features" class="landing-nav-link">Features</a>
+        <a href="#benefits" class="landing-nav-link">Benefits</a>
+        <a href="dashboard.html" class="landing-nav-link">User Dashboard</a>
+        <a href="booking.html" class="landing-nav-link">Book a Token</a>
+        <a href="tracking.html" class="landing-nav-link">Live Tracking</a>
+        <a href="staff.html" class="landing-nav-link">Staff Dashboard</a>
+        <a href="admin.html" class="landing-nav-link">Admin Dashboard</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="hero-pill">
+            <span class="pulse-dot"></span>
+            <span>Real-Time Virtual Queue Platform</span>
+          </div>
+          <h1 class="hero-title">
+            Skip the Line, <span class="text-gradient">Save Your Time.</span>
+          </h1>
+          <p class="hero-subtitle">
+            SmartQueue eliminates crowded waiting rooms at hospitals, banks, college offices, and citizen service centers. Book your digital token in seconds, track live queue movement, and arrive right when it's your turn.
+          </p>
+
+          <div class="d-flex flex-wrap align-items-center gap-3">
+            <a href="booking.html" class="btn-sq-primary px-4 py-3">
+              <i class="fa-solid fa-ticket"></i> Get Started
+            </a>
+            <a href="dashboard.html" class="btn-sq-outline px-4 py-3">
+              <i class="fa-solid fa-desktop"></i> View Demo
+            </a>
+          </div>
+
+          <!-- Quick Jump Links for Judges / Evaluators -->
+          <div class="d-flex flex-wrap align-items-center gap-2 mt-3 small">
+            <span class="text-muted fw-medium">Explore Dashboards:</span>
+            <a href="tracking.html" class="badge rounded-pill text-bg-light border text-primary px-3 py-2 text-decoration-none">Live Tracker</a>
+            <a href="staff.html" class="badge rounded-pill text-bg-light border text-primary px-3 py-2 text-decoration-none">Staff Desk</a>
+            <a href="admin.html" class="badge rounded-pill text-bg-light border text-primary px-3 py-2 text-decoration-none">Admin Analytics</a>
+          </div>
+
+          <div class="hero-stats-strip">
+            <div class="hero-stat-item">
+              <strong class="tabular-nums">65%</strong>
+              <span>Less lobby wait time</span>
+            </div>
+            <div class="hero-stat-item">
+              <strong class="tabular-nums" id="hero-live-centers">4+</strong>
+              <span>Active service hubs</span>
+            </div>
+            <div class="hero-stat-item">
+              <strong class="tabular-nums">Real-Time</strong>
+              <span>Cross-tab live sync</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="hero-preview-wrapper">
+            <div class="hero-live-card">
+              <img src="assets/images/hero-illustration.svg" alt="SmartQueue Virtual Queue Preview" class="img-fluid rounded-3" />
+              <div class="mt-3 pt-3 border-top d-flex flex-wrap align-items-center justify-content-between gap-2">
+                <div class="d-flex align-items-center gap-2 small">
+                  <span class="sq-badge sq-badge-serving"><span class="pulse-dot" style="width:6px;height:6px;"></span> Live Queue Active</span>
+                  <span class="text-muted" id="hero-active-summary">Demo Token OPD-108 ready to track</span>
+                </div>
+                <a href="tracking.html" class="btn-sq-soft py-1 px-3">
+                  Open Tracker <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-floating-badge d-none d-md-flex">
+              <div class="stat-icon green">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div>
+                <div class="fw-bold small text-dark">Smart Wait Prediction</div>
+                <div class="text-muted" style="font-size:0.76rem;">Updates dynamically per counter</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported Sectors Quick Launch -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center mb-4">
+        <span class="section-eyebrow">Built For High-Traffic Locations</span>
+        <h2 class="section-heading">Instant Virtual Queues Across Sectors</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+          <div class="sector-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-hospital"></i></div>
+            <h5 class="fw-bold mb-2">Hospitals & Clinics</h5>
+            <p class="small text-secondary mb-3">OPD consultations, blood labs, and pharmacy pickups without crowded waiting halls.</p>
+            <a href="booking.html?center=ctr-1" class="small fw-semibold text-primary">Book Hospital Token <i class="fa-solid fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="sector-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-building-columns"></i></div>
+            <h5 class="fw-bold mb-2">Banks & Finance</h5>
+            <p class="small text-secondary mb-3">Account KYC, teller desks, and loan advisory queues scheduled effortlessly.</p>
+            <a href="booking.html?center=ctr-2" class="small fw-semibold text-primary">Book Bank Token <i class="fa-solid fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="sector-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h5 class="fw-bold mb-2">College Offices</h5>
+            <p class="small text-secondary mb-3">Registrar transcripts, financial aid, and admissions desks organized for students.</p>
+            <a href="booking.html?center=ctr-3" class="small fw-semibold text-primary">Book Campus Token <i class="fa-solid fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="sector-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-id-card"></i></div>
+            <h5 class="fw-bold mb-2">Service Centers</h5>
+            <p class="small text-secondary mb-3">Passports, municipal permits, and utility billing counters with zero paper clutter.</p>
+            <a href="booking.html?center=ctr-4" class="small fw-semibold text-primary">Book Civic Token <i class="fa-solid fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="section-pad section-subtle">
+    <div class="container">
+      <div class="text-center mx-auto mb-5" style="max-width: 640px;">
+        <span class="section-eyebrow">Simple 4-Step Flow</span>
+        <h2 class="section-heading">How SmartQueue Works</h2>
+        <p class="text-secondary">Designed so anyone can join a queue in under 20 seconds—no app download required.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card">
+            <div class="step-number">01</div>
+            <h5 class="fw-bold mb-2">Select Center & Service</h5>
+            <p class="small text-secondary mb-0">Pick your hospital, bank, campus office, or citizen center and view real-time queue load before booking.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card">
+            <div class="step-number">02</div>
+            <h5 class="fw-bold mb-2">Book Digital Token</h5>
+            <p class="small text-secondary mb-0">Enter your name, mobile number, and date to receive an instant unique token number like <strong>OPD-108</strong>.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card">
+            <div class="step-number">03</div>
+            <h5 class="fw-bold mb-2">Track Queue Live</h5>
+            <p class="small text-secondary mb-0">Watch how many people are ahead of you, see who's serving now, and check dynamic wait-time updates.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card">
+            <div class="step-number">04</div>
+            <h5 class="fw-bold mb-2">Arrive Right On Time</h5>
+            <p class="small text-secondary mb-0">Walk directly to your assigned counter when called by staff—no wasted hours standing in line.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section-pad bg-white">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5 gap-3">
+        <div>
+          <span class="section-eyebrow">Platform Capabilities</span>
+          <h2 class="section-heading mb-0">Everything Needed for Smarter Queues</h2>
+        </div>
+        <a href="dashboard.html" class="btn-sq-outline">
+          Launch Interactive Demo <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-ticket"></i></div>
+            <h5 class="fw-bold mb-2">Instant Digital Token Engine</h5>
+            <p class="small text-secondary mb-0">Generates collision-free department tokens (e.g., OPD-108, ACC-303) with printable digital confirmation tickets.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-satellite-dish"></i></div>
+            <h5 class="fw-bold mb-2">Live Queue Progress Radar</h5>
+            <p class="small text-secondary mb-0">Visual stepper, completion progress bar, and live lineup view showing exactly who is being served right now.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-hourglass-half"></i></div>
+            <h5 class="fw-bold mb-2">Dynamic Wait Estimation</h5>
+            <p class="small text-secondary mb-0">Wait times automatically recalculate based on department service speed and remaining active tokens ahead.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-headset"></i></div>
+            <h5 class="fw-bold mb-2">Dedicated Staff Console</h5>
+            <p class="small text-secondary mb-0">One-click Call Next Token, Mark Completed, Skip No-Shows, and Recall Skipped Customers across counters.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-chart-pie"></i></div>
+            <h5 class="fw-bold mb-2">Admin Analytics & Controls</h5>
+            <p class="small text-secondary mb-0">Interactive SVG performance charts, daily token volume metrics, plus instant counter & department management.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon-box"><i class="fa-solid fa-bolt"></i></div>
+            <h5 class="fw-bold mb-2">Real-Time Cross-Tab Sync</h5>
+            <p class="small text-secondary mb-0">Open Staff Console in one tab and Live Tracking in another—every counter action reflects immediately.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits" class="section-pad section-subtle">
+    <div class="container">
+      <div class="text-center mx-auto mb-5" style="max-width: 640px;">
+        <span class="section-eyebrow">Mutual Value</span>
+        <h2 class="section-heading">Built for Citizens & Organizations</h2>
+        <p class="text-secondary">Better visitor experiences paired with higher staff throughput and cleaner operations.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="benefit-card">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="stat-icon blue"><i class="fa-solid fa-users"></i></div>
+              <div>
+                <h3 class="h4 fw-bold mb-0">For Visitors & Citizens</h3>
+                <p class="small text-muted mb-0">Patients, bank customers, students & applicants</p>
+              </div>
+            </div>
+            <ul class="benefit-list text-secondary">
+              <li><i class="fa-solid fa-circle-check text-primary mt-1"></i><span>Book from home, dorm, or commute—never stand in long hallways again.</span></li>
+              <li><i class="fa-solid fa-circle-check text-primary mt-1"></i><span>Know your exact queue position and live waiting minutes at a glance.</span></li>
+              <li><i class="fa-solid fa-circle-check text-primary mt-1"></i><span>Cancel or reschedule effortlessly if plans change so spots aren't wasted.</span></li>
+              <li><i class="fa-solid fa-circle-check text-primary mt-1"></i><span>Complete visit history and digital tickets accessible anytime on mobile.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="benefit-card benefit-card-primary">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="stat-icon" style="background: rgba(255,255,255,0.18); color:#ffffff;"><i class="fa-solid fa-building-shield"></i></div>
+              <div>
+                <h3 class="h4 fw-bold mb-0">For Service Providers</h3>
+                <p class="small opacity-75 mb-0">Hospitals, banks, university offices & civic centers</p>
+              </div>
+            </div>
+            <ul class="benefit-list">
+              <li><i class="fa-solid fa-circle-check text-info mt-1"></i><span>Reduce lobby congestion and prevent front-desk friction during peak hours.</span></li>
+              <li><i class="fa-solid fa-circle-check text-info mt-1"></i><span>Empower counter staff with fast Call Next, Complete, and Skip controls.</span></li>
+              <li><i class="fa-solid fa-circle-check text-info mt-1"></i><span>Monitor counter load, department bottlenecks, and completion rates visually.</span></li>
+              <li><i class="fa-solid fa-circle-check text-info mt-1"></i><span>Clean frontend architecture ready for Spring Boot + MySQL REST APIs.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="token-spotlight-card text-center py-5 px-4">
+        <div class="position-relative" style="z-index:1;">
+          <h2 class="text-white fw-extrabold mb-2">Ready to Experience Frictionless Queuing?</h2>
+          <p class="opacity-90 mx-auto mb-4" style="max-width: 560px;">
+            Try booking a live demo token, moving the queue from the Staff Console, or analyzing throughput in the Admin Dashboard.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="booking.html" class="btn btn-light text-primary fw-bold px-4 py-2">
+              <i class="fa-solid fa-ticket me-1"></i> Book Demo Token
+            </a>
+            <a href="staff.html" class="btn btn-outline-light fw-bold px-4 py-2">
+              <i class="fa-solid fa-headset me-1"></i> Open Staff Console
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="landing-footer">
+    <div class="container">
+      <div class="row g-4 pb-4 border-bottom" style="border-color: rgba(255,255,255,0.1) !important;">
+        <div class="col-lg-4">
+          <div class="brand-lockup text-white mb-3">
+            <img src="assets/images/logo.svg" alt="SmartQueue Logo" />
+            <span>Smart<span style="color:#60A5FA;">Queue</span></span>
+          </div>
+          <p class="small text-secondary mb-3" style="color:#94a3b8 !important;">
+            Modern Virtual Queue Management System designed for hospitals, banks, university offices, and public service centers.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#contact-support" class="social-btn" data-social-toast="GitHub repository ready for hackathon export" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#contact-support" class="social-btn" data-social-toast="Connected to SmartQueue LinkedIn showcase" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#contact-support" class="social-btn" data-social-toast="SmartQueue updates feed active" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <h6>Citizen Portal</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="dashboard.html">User Dashboard</a></li>
+            <li><a href="booking.html">Book a Token</a></li>
+            <li><a href="tracking.html">Live Queue Tracker</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3">
+          <h6>Operations</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="staff.html">Staff Queue Console</a></li>
+            <li><a href="admin.html">Admin Analytics</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 col-lg-3" id="contact-support">
+          <h6>Contact & Support</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small" style="color:#94a3b8;">
+            <li><i class="fa-solid fa-envelope me-2 text-primary"></i> hello@smartqueue.demo</li>
+            <li><i class="fa-solid fa-phone me-2 text-primary"></i> +1 (800) 555-0192</li>
+            <li><i class="fa-solid fa-location-dot me-2 text-primary"></i> Innovation Hub, Block A</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-4 d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 small" style="color:#64748b;">
+        <span>© 2026 SmartQueue Virtual Queue Management System.</span>
+        <button type="button" class="btn btn-sm btn-outline-secondary text-light border-secondary" data-action="reset-demo">
+          <i class="fa-solid fa-rotate me-1"></i> Reset Demo Data
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Landing page live state summary & social link feedback
+    document.addEventListener('DOMContentLoaded', () => {
+      const SQ = window.SmartQueue;
+      if (!SQ) return;
+
+      const state = SQ.getState();
+      const centersEl = document.getElementById('hero-live-centers');
+      const summaryEl = document.getElementById('hero-active-summary');
+      const activeTok = SQ.getActiveUserToken(state);
+
+      if (centersEl) centersEl.textContent = `${state.centers.length} Centers`;
+      if (summaryEl && activeTok) {
+        const m = SQ.computeQueueMetrics(state, activeTok);
+        summaryEl.textContent = `Token ${activeTok.tokenNumber} • ${m.peopleAhead} ahead (~${m.estimatedWait}m wait)`;
+      }
+
+      document.querySelectorAll('[data-social-toast]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          SQ.showToast('SmartQueue Connect', link.dataset.socialToast, 'info');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

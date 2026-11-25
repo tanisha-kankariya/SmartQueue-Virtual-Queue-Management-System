@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" fill="none" role="img" aria-label="SmartQueue Virtual Queue Illustration">
+  <defs>
+    <linearGradient id="bgSoft" x1="0" y1="0" x2="560" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="blueCard" x1="0" y1="0" x2="220" y2="140" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1E40AF"/>
+    </linearGradient>
+  </defs>
+  <rect width="560" height="400" rx="24" fill="url(#bgSoft)"/>
+  <!-- Decorative subtle dots -->
+  <circle cx="64" cy="64" r="24" fill="#DBEAFE" opacity="0.7"/>
+  <circle cx="496" cy="330" r="38" fill="#DBEAFE" opacity="0.5"/>
+  <!-- Main Dashboard Window -->
+  <rect x="48" y="46" width="464" height="308" rx="18" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  <!-- Window Header -->
+  <rect x="48" y="46" width="464" height="44" rx="18" fill="#F8FAFC"/>
+  <path d="M48 72H512V90H48V72Z" fill="#F8FAFC"/>
+  <line x1="48" y1="90" x2="512" y2="90" stroke="#E2E8F0"/>
+  <circle cx="72" cy="68" r="5" fill="#FCA5A5"/>
+  <circle cx="88" cy="68" r="5" fill="#FCD34D"/>
+  <circle cx="104" cy="68" r="5" fill="#86EFAC"/>
+  <rect x="190" y="61" width="180" height="14" rx="7" fill="#E2E8F0"/>
+  <!-- Left Active Token Card -->
+  <rect x="74" y="112" width="206" height="146" rx="14" fill="url(#blueCard)"/>
+  <text x="94" y="138" fill="#BFDBFE" font-family="system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em">ACTIVE DIGITAL TOKEN</text>
+  <text x="94" y="178" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="32" font-weight="800">OPD-108</text>
+  <rect x="94" y="194" width="166" height="6" rx="3" fill="#1E3A8A"/>
+  <rect x="94" y="194" width="118" height="6" rx="3" fill="#60A5FA"/>
+  <text x="94" y="224" fill="#DBEAFE" font-family="system-ui, sans-serif" font-size="11" font-weight="500">Est. Wait: 12 mins</text>
+  <rect x="208" y="210" width="52" height="22" rx="11" fill="#10B981"/>
+  <text x="219" y="225" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="10" font-weight="700">LIVE</text>
+  <!-- Right Queue List Card -->
+  <rect x="298" y="112" width="188" height="216" rx="14" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="316" y="138" fill="#0F172A" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Queue Lineup</text>
+  <!-- Item 1 -->
+  <rect x="314" y="152" width="156" height="44" rx="10" fill="#FFFFFF" stroke="#BFDBFE"/>
+  <circle cx="332" cy="174" r="6" fill="#10B981"/>
+  <text x="346" y="170" fill="#0F172A" font-family="system-ui, sans-serif" font-size="11" font-weight="700">OPD-105</text>
+  <text x="346" y="185" fill="#10B981" font-family="system-ui, sans-serif" font-size="10" font-weight="600">Now Serving • C1</text>
+  <!-- Item 2 -->
+  <rect x="314" y="206" width="156" height="44" rx="10" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <circle cx="332" cy="228" r="6" fill="#F59E0B"/>
+  <text x="346" y="224" fill="#0F172A" font-family="system-ui, sans-serif" font-size="11" font-weight="700">OPD-106</text>
+  <text x="346" y="239" fill="#64748B" font-family="system-ui, sans-serif" font-size="10" font-weight="500">Next in Line</text>
+  <!-- Item 3 -->
+  <rect x="314" y="260" width="156" height="44" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.5"/>
+  <circle cx="332" cy="282" r="6" fill="#2563EB"/>
+  <text x="346" y="278" fill="#1E3A8A" font-family="system-ui, sans-serif" font-size="11" font-weight="700">OPD-108 (You)</text>
+  <text x="346" y="293" fill="#2563EB" font-family="system-ui, sans-serif" font-size="10" font-weight="600">2 ahead • ~12m</text>
+  <!-- Bottom Metric Mini Cards -->
+  <rect x="74" y="272" width="98" height="56" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="88" y="295" fill="#64748B" font-family="system-ui, sans-serif" font-size="10" font-weight="600">AHEAD</text>
+  <text x="88" y="317" fill="#0F172A" font-family="system-ui, sans-serif" font-size="18" font-weight="800">2 People</text>
+  <rect x="182" y="272" width="98" height="56" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="196" y="295" fill="#64748B" font-family="system-ui, sans-serif" font-size="10" font-weight="600">COUNTER</text>
+  <text x="196" y="317" fill="#2563EB" font-family="system-ui, sans-serif" font-size="18" font-weight="800">Desk 01</text>
+</svg>
